@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lab2.R
 
 class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<EmailAdapter.ViewHolder>() {
     // Provide a direct reference to each of the views within a data item
@@ -15,7 +16,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         // a row
         var senderTextView: TextView
         var titleTextView: TextView
-        var summaryTextView: TextView
+
 
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each sub-view
@@ -24,7 +25,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
             // to access the context from any ViewHolder instance.
             senderTextView = itemView.findViewById(R.id.senderTv)
             titleTextView = itemView.findViewById(R.id.titleTv)
-            summaryTextView = itemView.findViewById(R.id.summaryTv)
+
         }
 }
 
@@ -47,7 +48,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         // Set item views based on views and data model
         holder.senderTextView.text = email.sender
         holder.titleTextView.text = email.title
-        holder.summaryTextView.text = email.summary
+
     }
 
 
